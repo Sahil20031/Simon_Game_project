@@ -5,8 +5,16 @@ var gamestart=true;
 var Level=0;
 if(gamestart)
 {
-    $("body").on("dblclick",nextSequence);
-    gameStart=false;
+   if($(window).width()<1000)
+    {
+        $("body").on("touchstart",nextSequence);
+        gameStart=false;
+    }
+    else{
+        $("h1").text("Press Any Key to Restart")
+        $("body").on("keypress",nextSequence);
+        gameStart=false;
+    }
 }
 $(".btn").on("click",function(){
     var userChosenColour = $(this).attr("id");
@@ -56,7 +64,13 @@ function checkAnswer(levels)
     setTimeout(function(){
         $("body").removeClass("game-over")
     },200);  
-    $("h1").text("Game Over, Press Any Key to Restart") 
+    if($(window).width()<1000)
+    {
+        $("h1").text("Game Over, Click Anywhere to restart") ;
+    }
+    else{
+        $("h1").text("Game Over, Press a Key to restart") 
+    }
     startOver();
     }
     if(levels+1===gamePattern.length)
@@ -66,3 +80,4 @@ function checkAnswer(levels)
     }
 
 }
+
