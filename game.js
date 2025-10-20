@@ -5,7 +5,7 @@ var gamestart=true;
 var Level=0;
 if(gamestart)
 {
-    $("body").on("keypress",nextSequence);
+    $("body").on("dblclick",nextSequence);
     gameStart=false;
 }
 $(".btn").on("click",function(){
@@ -64,4 +64,5 @@ function checkAnswer(levels)
         userClickedPattern.length =0;
         setTimeout(nextSequence,1000);
     }
+
 }
