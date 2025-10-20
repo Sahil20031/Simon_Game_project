@@ -3,27 +3,12 @@ var gamePattern = [];
 var userClickedPattern = [];
 var gamestart=true;
 var Level=0;
-var mylatesttap;
-function doubletap() {
-
-   var now = new Date().getTime();
-   var timesince = now - mylatesttap;
-   if((timesince < 600) && (timesince > 0)){
-
-    // double tap   
-
-   }else{
-            // too much time to be a doubletap
-         }
-
-   mylatesttap = new Date().getTime();
-   nextsequence();
-}
 if(gamestart)
 {
    if($(window).width()<1000)
     {
-        $("body").on("click",doubletap);
+        $("body").append("<button class="start_button">Click to start<button>");
+       $("start_button").on("Click",nextSequence);
         gameStart=false;
     }
     else{
@@ -96,5 +81,6 @@ function checkAnswer(levels)
     }
 
 }
+
 
 
