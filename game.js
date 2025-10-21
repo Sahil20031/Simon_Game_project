@@ -7,7 +7,7 @@ if(gamestart)
 {
    if($(window).width()<1000)
     {
-        $("body").append("<button class="start_button">Click to start<button>");
+        $("body").append("<button class='start_button'>Click to start<button>");
        $("start_button").on("Click",nextSequence);
         gameStart=false;
     }
@@ -81,6 +81,7 @@ function checkAnswer(levels)
     }
 
 }
+
 
 
 
