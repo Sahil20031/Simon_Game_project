@@ -7,14 +7,14 @@ if(gamestart)
 {
    if($(window).width()<1000)
     {
-        $("body").append("<button class='start_button'>Click to start<button>");
-       $("start_button").on("Click",nextSequence);
-        gameStart=false;
+        $("body").append("<button class='start_button'>Click to start</button>");
+       $(".start_button").on("click",nextSequence);
+        gamestart=false;
     }
     else{
         $("h1").text("Press Any Key to Restart")
         $("body").on("keypress",nextSequence);
-        gameStart=false;
+        gamestart=false;
     }
 }
 $(".btn").on("click",function(){
@@ -67,7 +67,7 @@ function checkAnswer(levels)
     },200);  
     if($(window).width()<1000)
     {
-        $("h1").text("Game Over, Click Anywhere to restart") ;
+        $("h1").text("Game Over, Click On Start Button to restart") ;
     }
     else{
         $("h1").text("Game Over, Press a Key to restart") 
@@ -81,7 +81,5 @@ function checkAnswer(levels)
     }
 
 }
-
-
 
 
