@@ -46,6 +46,12 @@ body {
 .yellow {
   background-color: yellow;
 }
+.start_button
+{
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
 
 .pressed {
   box-shadow: 0 0 20px white;
